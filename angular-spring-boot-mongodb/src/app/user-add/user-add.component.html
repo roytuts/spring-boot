@@ -1,0 +1,23 @@
+<div>
+  <h2>Add User Detail</h2>
+  <div>
+    <p>
+		<label>Name:
+			<input [(ngModel)]="user.name" placeholder="User Name"/>
+		</label>
+    </p>
+	<p>
+		<label>Email:
+			<input [(ngModel)]="user.email" placeholder="User Email"/>
+		</label>
+    </p>
+	<p>
+		<label>Password:
+			<input type="password" [(ngModel)]="user.pwd" placeholder="User Password"/>
+		</label>
+    </p>
+  </div>
+  <button (click)="goBack()">go back</button>
+   
+  <button (click)="save()">save</button>
+</div>
