@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <button id="connect" onclick="connect();">Connect to Server</button>
+                <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect from Server</button>
+            </div>
+            <div>
+                <input type="text" id="email" placeholder="Enter valid email address to subscribe" disabled="disabled" style="width: 350px; margin: 5px 0;">
+            </div>
+            <div class="row">
+                <button id="subscribe" onclick="subscribe();" disabled="disabled">Subscribe Me</button>
+            </div>
+        </div>
+        
+		<div id="msg"></div>
+    </div>
+</body>
+</html>
