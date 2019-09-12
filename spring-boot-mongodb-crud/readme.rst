@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/spring-boot-mongodb-crud-example/
+You can read tutorial https://www.roytuts.com/spring-boot-mongodb-crud-example/

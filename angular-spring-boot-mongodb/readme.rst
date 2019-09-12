@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/angular-spring-boot-mongodb-crud-example
+You can read tutorial https://www.roytuts.com/angular-spring-boot-mongodb-crud-example

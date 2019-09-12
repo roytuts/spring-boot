@@ -18,7 +18,7 @@ jar {
     baseName = 'SpringBootFileDownload'
     version = '0.0.1-SNAPSHOT'
     manifest {
-        attributes("Main-Class": "com.jeejava.main.Application")
+        attributes("Main-Class": "com.roytuts.main.Application")
     }
 }
 

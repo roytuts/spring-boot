@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/spring-mongodb-functional-reactive-microservices-example/
+You can read tutorial https://www.roytuts.com/spring-mongodb-functional-reactive-microservices-example/
