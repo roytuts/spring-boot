@@ -1,0 +1,31 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.7.RELEASE'
+	}
+	
+    repositories {
+    	mavenLocal()
+    	mavenCentral()
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper:9.0.22')
+    compile('javax.servlet:jstl:1.2')
+}
