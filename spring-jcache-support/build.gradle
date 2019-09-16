@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.8.RELEASE'
+	}
+	
+    repositories {
+    	mavenLocal()
+    	mavenCentral()
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+    maven {
+    	url 'http://www.terracotta.org/download/reflector/releases'
+    }
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	implementation("javax.cache:cache-api:1.1.1")
+	implementation("org.ehcache:jcache:1.0.0")
+	implementation("net.sf.ehcache:ehcache-ee:2.8.5")
+}
