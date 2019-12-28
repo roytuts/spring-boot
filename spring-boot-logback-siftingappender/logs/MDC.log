@@ -1,0 +1,4 @@
+2019.12.28 12:50:16.636 [DEBUG] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Debug Message
+2019.12.28 12:50:16.643 [WARN] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Warn Message
+2019.12.28 12:50:16.643 [ERROR] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Error Message
+2019.12.28 12:50:16.643 [INFO] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Info Message

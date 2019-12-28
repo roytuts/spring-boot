@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <property name="PATTERN" value="%d{yyyy.MM.dd HH:mm:ss.SSS} [%p] %c %m%n"/>
+    <property name="LOG_LOC" value="logs"/>
+    <property name="MAX" value="5"/>
+    <property name="DEF_MODULE" value="main"/>
+
+    <!-- ############################## Appender configurations ############################## -->
+    <appender name="FILE" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <!-- This is MDC value, assigned via Java code -->
+        <discriminator>
+            <key>module</key>
+            <defaultValue>${DEF_MODULE}</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${module}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>${LOG_LOC}/${module}.log</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+                    <fileNamePattern>${LOG_LOC}/${module}.%i.log</fileNamePattern>
+                    <minIndex>1</minIndex>
+                    <maxIndex>${MAX}</maxIndex>
+                </rollingPolicy>
+                <triggeringPolicy class="com.roytuts.spring.boot.logback.siftingappender.config.StartupTrigger"/>
+                <encoder>
+                    <pattern>${PATTERN}</pattern>
+                </encoder>
+            </appender>
+        </sift>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+	
+    <!-- ############################## Logger configurations ############################## -->
+    <logger name="com.roytuts" level="debug"/>
+
+    <logger name="org.springframework.web" level="info" additivity="false"/>
+
+    <logger name="raw" level="debug" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -1,0 +1,8 @@
+2019.12.28 12:50:15.767 [INFO] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Starting SpringBootLogbackSiftingAppenderApp on DESKTOP-KDLKCQ0 with PID 2624 (C:\jee_workspace\spring-boot-logback-siftingappender\bin\main started by SoumitraSarkar in C:\jee_workspace\spring-boot-logback-siftingappender)
+2019.12.28 12:50:15.793 [DEBUG] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019.12.28 12:50:15.795 [INFO] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp No active profile set, falling back to default profiles: default
+2019.12.28 12:50:16.632 [INFO] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Started SpringBootLogbackSiftingAppenderApp in 1.421 seconds (JVM running for 2.404)
+2019.12.28 12:50:16.634 [DEBUG] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Debug Message
+2019.12.28 12:50:16.635 [WARN] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Warn Message
+2019.12.28 12:50:16.635 [ERROR] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Error Message
+2019.12.28 12:50:16.635 [INFO] com.roytuts.spring.boot.logback.siftingappender.SpringBootLogbackSiftingAppenderApp Info Message
