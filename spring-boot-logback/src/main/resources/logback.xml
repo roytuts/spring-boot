@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="CA"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<!-- Log message format -->
+		<encoder>
+			<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36} -
+				%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="RFA" class="ch.qos.logback.core.FileAppender">
+		<file>SpringBoot.log</file>
+		<encoder>
+			<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36} -
+				%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CA" />
+		<appender-ref ref="RFA" />
+	</root>
+
+</configuration>
