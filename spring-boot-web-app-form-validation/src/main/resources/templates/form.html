@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Web App Form Validation</title>
+<style type="text/css">
+#form {
+	width: 500px;
+	padding: 20px;
+	margin: 50px auto;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+	<div id="form">
+		<h2>Validate Form</h2>
+		<form name='formValidation' th:action="@{/}" th:object="${user}"
+			method='POST'>
+			<table>
+				<tr>
+					<td>Id</td>
+					<td><input type='text' th:field="*{id}"></td>
+					<td th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Id
+						Error</td>
+				</tr>
+				<tr>
+					<td>Height</td>
+					<td><input type='text' th:field="*{height}"></td>
+					<td th:if="${#fields.hasErrors('height')}" th:errors="*{height}">Height
+						Error</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type='text' th:field="*{name}" /></td>
+					<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name
+						Error</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type='text' th:field="*{email}" /></td>
+					<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email
+						Error</td>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td><input type='text' th:field="*{msg}" /></td>
+					<td th:if="${#fields.hasErrors('msg')}" th:errors="*{msg}">Message
+						Error</td>
+				</tr>
+				<tr>
+					<td>Regular Expression</td>
+					<td><input type='text' th:field="*{regex}" /></td>
+					<td th:if="${#fields.hasErrors('regex')}" th:errors="*{regex}">Regex
+						Error</td>
+				</tr>
+				<tr>
+					<td>Future or Present Date</td>
+					<td><input type='date' th:field="*{localDate}" /></td>
+					<td th:if="${#fields.hasErrors('localDate')}"
+						th:errors="*{localDate}">Future or Present Date Error</td>
+				</tr>
+				<tr>
+					<td>Past or Present Date</td>
+					<td><input type='date' th:field="*{pastDate}" /></td>
+					<td th:if="${#fields.hasErrors('pastDate')}"
+						th:errors="*{pastDate}">Past or Present Date Error</td>
+				</tr>
+				<tr>
+					<td>Future Date</td>
+					<td><input type='date' th:field="*{futureDate}" /></td>
+					<td th:if="${#fields.hasErrors('futureDate')}"
+						th:errors="*{futureDate}">Future Date Error</td>
+				</tr>
+				<tr>
+					<td>Negative</td>
+					<td><input type='text' th:field="*{negative}" /></td>
+					<td th:if="${#fields.hasErrors('negative')}"
+						th:errors="*{negative}">Negative Error</td>
+				</tr>
+				<tr>
+					<td>Negative or Zero</td>
+					<td><input type='text' th:field="*{negativeOrZero}" /></td>
+					<td th:if="${#fields.hasErrors('negativeOrZero')}"
+						th:errors="*{negativeOrZero}">Negative or Zero Error</td>
+				</tr>
+				<tr>
+					<td colspan='11'><input name="submit" type="submit"
+						value="Submit" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
