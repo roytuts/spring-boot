@@ -7,11 +7,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EntityScan("com.roytuts.spring.file.download.entity")
 @EnableJpaRepositories("com.roytuts.spring.file.download.repository")
-@SpringBootApplication(scanBasePackages = "com.roytuts.spring.file.download")
+@SpringBootApplication
 public class SpringRestFileDownload {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestFileDownload.class, args);
 	}
-
 }
