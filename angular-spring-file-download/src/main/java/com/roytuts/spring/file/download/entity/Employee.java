@@ -8,11 +8,12 @@ import javax.persistence.Id;
 
 @Entity
 public class Employee {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
 	private String name;
+
 	@Column(name = "email_address")
 	private String email;
 
