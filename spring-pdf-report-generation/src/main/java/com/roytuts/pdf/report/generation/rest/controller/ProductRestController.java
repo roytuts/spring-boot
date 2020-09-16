@@ -52,7 +52,7 @@ public class ProductRestController {
 
 		document.add(title);
 
-		PdfPTable table = new PdfPTable(4);
+		PdfPTable table = new PdfPTable(6);
 		table.setSpacingBefore(25);
 		table.setSpacingAfter(25);
 
