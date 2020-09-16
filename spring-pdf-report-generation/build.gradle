@@ -1,0 +1,37 @@
+buildscript {
+	ext {
+		springBootVersion = '2.3.3.RELEASE'
+	}
+	
+    repositories {
+    	mavenCentral()
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+	
+	implementation('com.itextpdf:itextpdf:5.5.13.1')
+	
+	implementation 'mysql:mysql-connector-java:8.0.21'
+	
+    //required for JDK 9 or above
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+}
