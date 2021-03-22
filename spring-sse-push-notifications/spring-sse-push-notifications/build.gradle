@@ -1,11 +1,9 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.8.RELEASE'
+		springBootVersion = '2.1.8.RELEASE' to 2.4.4
 	}
 	
     repositories {
-    	mavenLocal()
-    	mavenCentral()
     }
     
     dependencies {
@@ -13,15 +11,17 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
 
 sourceCompatibility = 12
 targetCompatibility = 12
 
 repositories {
-	mavenLocal()
     mavenCentral()
+    jcenter()
 }
 
 dependencies {

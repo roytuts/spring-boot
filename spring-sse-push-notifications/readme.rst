@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/server-sent-events-spring-push-notifications/
+You can read tutorial https://roytuts.com/server-sent-events-spring-push-notifications/
