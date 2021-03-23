@@ -1,0 +1,36 @@
+buildscript {
+	ext {
+		springBootVersion = '2.4.4'
+	}
+	
+    repositories {
+    	maven {
+    		url 'https://plugins.gradle.org/m2/'
+    	}
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}") {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	}
+	
+	implementation "org.springframework.boot:spring-boot-starter-jetty"
+}
