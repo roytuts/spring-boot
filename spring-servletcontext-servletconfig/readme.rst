@@ -1,1 +1,1 @@
-You can read tutorial at https://www.roytuts.com/how-to-get-servletcontext-and-servletconfig-object-in-a-spring-bean/
+You can read tutorial at https://roytuts.com/how-to-get-servletcontext-and-servletconfig-object-in-a-spring-bean/
