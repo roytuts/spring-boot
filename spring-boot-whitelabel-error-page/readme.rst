@@ -1,0 +1,1 @@
+You can read tutorial https://roytuts.com/how-to-deal-with-whitelabel-error-page-in-spring-boot-applications/
