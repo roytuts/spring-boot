@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/upload-file-using-react-and-spring-boot/
+You can read tutorial https://roytuts.com/upload-file-using-react-and-spring-boot/
