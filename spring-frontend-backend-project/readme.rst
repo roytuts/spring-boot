@@ -1,0 +1,1 @@
+Please follow the tutorial https://roytuts.com/integrate-angular-into-spring-boot-using-gradle/
