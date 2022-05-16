@@ -1,0 +1,49 @@
+buildscript {
+  	ext {
+    	springBootVersion = '2.6.7'
+  	}
+ 
+  	repositories {
+    	mavenCentral()
+  	}
+ 
+  	dependencies {
+    	classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+  	}
+}
+ 
+plugins {
+	id 'war'
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+/*jar {
+	enabled = false
+	//classifier = ''
+}
+
+bootJar {
+	enabled = true
+}*/
+
+war {
+	enabled = false
+	//classifier = ''
+}
+
+bootWar {
+	enabled = true
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+ 
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+}
+
