@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: <client id>
+            client-secret: <client secret>
+  mvc:
+    view:
+       prefix: /view/
+       suffix: .jsp
+
+server:
+  port: 9000
