@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/static/css/style.css">
 <style>
 .ui-autocomplete-loading {
-	background: white url("/static/images/ui-anim_basic_16x16.gif") right
+	background: white url("/static/images/ui-anim_basic_16x16.png") right
 		center no-repeat;
 }
 </style>
