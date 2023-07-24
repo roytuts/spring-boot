@@ -1,1 +1,1 @@
-You can go through the tutorial https://roytuts.com/spring-boot-profile-based-logging/
+Please follow the tutorial https://roytuts.com/spring-boot-profile-based-logging/
