@@ -1,0 +1,42 @@
+package com.roytuts.spring.boot.security.form.based.authentication.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class SecurityConfig {
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication().passwordEncoder(passwordEncoder).withUser("admin")
+				.password("$2a$10$dl8TemMlPH7Z/mpBurCX8O4lu0FoWbXnhsHTYXVsmgXyzagn..8rK").roles("ADMIN"); // password -
+																											// admin
+	}
+
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http.authorizeHttpRequests(auth -> auth
+				// ignore home, login, error pages and css files
+				.requestMatchers("/", "/login", "/css/**", "/error**").permitAll().requestMatchers("/admin")
+				.hasRole("ADMIN").anyRequest().authenticated()); // check for admin url with ADMIN role
+		// allow users to authenticate with form based login
+		http.formLogin(form -> form.loginPage("/login") // specifies custom login page
+				.permitAll().usernameParameter("username") // overrides spring's default j_username with username
+															// parameter
+				.passwordParameter("password") // overrides spring's default j_password with password parameter
+				.loginProcessingUrl("/j_spring_security_check") // login processing url
+				.defaultSuccessUrl("/admin") // default target url which will be shown after successful login
+				.failureUrl("/login?error")); // authenticate failure url
+		http.logout((logout) -> logout.permitAll());
+		return http.build();
+	}
+
+}
