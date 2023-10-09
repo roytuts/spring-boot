@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<title>Spring Security Basic - Form Based Authentication</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<!--<style th:inline="css">
+			.error {
+				padding: 15px;
+				margin-bottom: 20px;
+				border: 1px solid transparent;
+				border-radius: 4px;
+				color: #a94442;
+				background-color: #f2dede;
+				border-color: #ebccd1;
+			}
+			.msg {
+				padding: 15px;
+				margin-bottom: 20px;
+				border: 1px solid transparent;
+				border-radius: 4px;
+				color: #31708f;
+				background-color: #d9edf7;
+				border-color: #bce8f1;
+			}
+			#login-box {
+				width: 500px;
+				padding: 20px;
+				margin: 50px auto;
+				background: #fff;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border: 1px solid #000;
+			}
+		</style>-->
+	</head>
+	<body>
+		<div id="login-box">
+			<h2>Login Here</h2>
+			<div th:if="${error}" th:text="${error}"></div>
+			<div th:if="${msg}" th:text="${msg}"></div>
+			<form th:action="@{/j_spring_security_check}" method="post">
+				<div>
+				<input type="text" name="username" placeholder="Username"/>
+				</div>
+				<div>
+				<input type="password" name="password" placeholder="Password"/>
+				</div>
+				<input type="submit" value="Log in" />
+			</form>
+		</div>
+	</body>
+</html>
