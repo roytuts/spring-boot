@@ -1,1 +1,1 @@
-You can read tutorial https://roytuts.com/use-jetty-instead-of-tomcat-in-spring-boot-application/
+please follow the tutorial https://roytuts.com/use-jetty-instead-of-tomcat-in-spring-boot-application/
