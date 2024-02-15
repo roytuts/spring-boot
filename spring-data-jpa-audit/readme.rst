@@ -1,1 +1,0 @@
-You can read tutorial https://www.roytuts.com/spring-data-jpa-entity-auditing-using-entitylisteners/
