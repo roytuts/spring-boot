@@ -1,1 +1,1 @@
-You can go through the tutorial https://www.roytuts.com/how-to-generate-pdf-report-from-mysql-database-in-spring-boot/
+Please follow the tutorial https://roytuts.com/how-to-generate-pdf-report-from-mysql-database-in-spring-boot/
