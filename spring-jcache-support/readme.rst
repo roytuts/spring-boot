@@ -1,1 +1,1 @@
-You can go through the tutorial https://www.roytuts.com/spring-jcache-support/
+Please follow the tutorial https://roytuts.com/spring-jcache-support/
