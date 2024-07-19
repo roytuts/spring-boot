@@ -1,1 +1,1 @@
-You can go through the tutorial https://www.roytuts.com/logging-configuration-in-spring-boot/
+Please follow the tutorial https://roytuts.com/logging-configuration-in-spring-boot/
